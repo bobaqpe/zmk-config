@@ -13,13 +13,9 @@
 #define RSE 2
 #define ADJ 3
 
-&lt {
-    quick_tap_ms = <200>;
-};
+&lt { quick_tap_ms = <200>; };
 
-&mt {
-    quick_tap_ms = <200>;
-};
+&mt { quick_tap_ms = <200>; };
 
 / {
     combos {
@@ -29,6 +25,12 @@
             bindings = <&sys_reset>;
             key-positions = <51 56>;
             timeout-ms = <50>;
+        };
+
+        bt_reset {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <50 52 26>;
+            layers = <0>;
         };
     };
 
