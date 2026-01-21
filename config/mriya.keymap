@@ -18,36 +18,36 @@
 &mt { quick_tap_ms = <200>; };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo-minus {
+            bindings = <&kp MINUS>;
+            key-positions = <10 11>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-          &kp ESC         &kp N1  &kp N2                  &kp N3     &kp N4     &kp N5         &kp N6       &kp N7         &kp N8     &kp N9         &kp N0    &kp EQUAL
-&kp LWIN  &kp GRAVE       &kp Q   &kp W                   &kp E      &kp R      &kp T          &kp Y        &kp U          &kp I      &kp O          &kp P     &kp LBKT        &kp RIGHT_BRACKET
-          &kp LEFT_SHIFT  &kp A   &kp S                   &kp D      &kp F      &kp G          &kp H        &kp J          &kp K      &kp L          &kp SEMI  &mt RSHIFT SQT
-          &kp LCTRL       &kp Z   &kp X                   &kp C      &kp V      &kp B          &kp N        &kp M          &kp COMMA  &kp DOT        &kp FSLH  &mt RCTRL BSLH
-                                  &mt LEFT_ALT LG(SPACE)  &lt 2 TAB  &kp SPACE  &lt 1 SPACE    &lt 1 ENTER  &kp BACKSPACE  &lt 2 DEL  &kp RIGHT_ALT
-            >;
-        };
-
-        lower_layer {
-            bindings = <
-                &kp C_AL_CALCULATOR  &none  &none   &none  &none   &none     &kp KP_NUMBER_0  &kp KP_DIVIDE    &kp KP_ASTERISK  &kp KP_MINUS     &kp LS(UNDERSCORE)  &kp MINUS
-&kp KP_NUMLOCK  &none                &none  &none   &none  &none   &none     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &none               &none            &kp PRINTSCREEN
-                &kp LSHFT            &none  &none   &none  &none   &none     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT       &none               &kp RIGHT_SHIFT
-                &trans               &none  &none   &none  &none   &none     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &none               &kp RCTRL
-                                            &trans  &mo 3  &trans  &trans    &trans           &trans           &mo 3            &trans
+          &kp ESC         &kp N1  &kp N2                  &kp N3     &kp N4  &kp N5       &kp N6     &kp N7           &kp N8     &kp N9    &kp N0    &kp EQUAL
+&kp LWIN  &kp GRAVE       &kp Q   &kp W                   &kp E      &kp R   &kp T        &kp Y      &kp U            &kp I      &kp O     &kp P     &kp LBKT        &kp RIGHT_BRACKET
+          &kp LEFT_SHIFT  &kp A   &kp S                   &kp D      &kp F   &kp G        &kp H      &kp J            &kp K      &kp L     &kp SEMI  &mt RSHIFT SQT
+          &kp LCTRL       &kp Z   &kp X                   &kp C      &kp V   &kp B        &kp N      &kp M            &kp COMMA  &kp DOT   &kp FSLH  &mt RCTRL BSLH
+                                  &mt LEFT_ALT LG(SPACE)  &lt 1 TAB  &mo 1   &kp SPACE    &kp ENTER  &lt 1 BACKSPACE  &lt 1 DEL  &kp RALT
             >;
         };
 
         raise_layer {
             bindings = <
-        &trans     &kp F1  &kp F2  &kp F3  &kp F4  &kp F5         &kp F6        &kp F7    &kp F8        &kp F9     &kp F10          &kp F11
-&trans  &none      &none   &none   &none   &none   &none          &kp C_VOL_UP  &kp HOME  &kp UP_ARROW  &kp PG_UP  &kp INSERT       &none            &kp F12
-        &kp LSHFT  &none   &none   &none   &none   &none          &kp C_MUTE    &kp LEFT  &kp UP        &kp RIGHT  &kp INS          &mt RCTRL K_APP
-        &trans     &none   &none   &none   &none   &none          &kp C_VOL_DN  &kp END   &kp DOWN      &kp PG_DN  &kp PAUSE_BREAK  &kp RCTRL
-                           &trans  &trans  &trans  &lt 3 SPACE    &lt 3 ENTER   &trans    &trans        &trans
+           &kp ESC           &kp F1   &kp F2   &kp F3     &kp F4        &kp F5             &kp F6           &kp F7           &kp F8     &kp F9     &kp F10       &kp MINUS
+&kp K_APP  &kp C_AL_CALC     &kp F11  &kp F12  &kp F13    &kp C_VOL_UP  &kp PAUSE_BREAK    &kp KP_SLASH     &kp KP_N7        &kp KP_N8  &kp KP_N9  &kp KP_N0     &kp KP_DOT  &kp F12
+           &kp LSHFT         &none    &none    &none      &kp C_MUTE    &kp PRINTSCREEN    &kp KP_ASTERISK  &kp KP_N4        &kp KP_N5  &kp KP_N6  &kp KP_MINUS  &kp RSHFT
+           &kp LEFT_CONTROL  &none    &none    &none      &kp C_VOL_DN  &kp KP_NUMLOCK     &kp KP_N0        &kp KP_N1        &kp KP_N2  &kp KP_N3  &kp KP_PLUS   &kp RCTRL
+                                      &trans   &lt 2 TAB  &mo 2         &kp SPACE          &kp ENTER        &lt 2 BACKSPACE  &mo 2      &kp RALT
             >;
         };
 
